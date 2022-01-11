@@ -53,8 +53,8 @@
   var model = new NotesModel();
   model.addNote("Buy milk");
   model.addNote("Go to the gym");
-  var notes = new NotesView(model);
-  notes.displayNotes();
+  var view = new NotesView(model);
+  view.displayNotes();
   console.log("The notes app is running");
   console.log(model.getNotes());
 })();

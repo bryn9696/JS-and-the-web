@@ -10,7 +10,8 @@ const NotesView = require("./notesView");
 const model = new NotesModel();
 model.addNote("Buy milk");
 model.addNote("Go to the gym");
-const notes = new NotesView(model);
-notes.displayNotes();
+const view = new NotesView(model);
+view.displayNotes();
+
 console.log("The notes app is running");
 console.log(model.getNotes());
