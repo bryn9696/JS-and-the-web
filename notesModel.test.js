@@ -19,4 +19,6 @@ describe("NotesModel", () => {
     model.reset();
     expect(model.getNotes()).toEqual([]);
   });
+
+  
 });
