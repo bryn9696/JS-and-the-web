@@ -30,4 +30,15 @@ describe('displays notes', () => {
     newDiv.append("new note!")
     expect(document.querySelector(".note")).toEqual(newDiv)
   })
+  it('shows the right number of notes', () => {
+    document.body.innerHTML = fs.readFileSync('./index.html');
+    const model = new NotesModel
+    const view = new NotesView(model)
+    const inputElement = document.querySelector('#note-input')
+    inputElement.value = 'new note!'
+    const buttonElement = document.querySelector('#add-note-button')
+    buttonElement.click()
+    buttonElement.click()
+    expect(document.querySelectorAll(".note").length).toEqual(2)
+  })
 })

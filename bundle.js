@@ -39,6 +39,9 @@
           });
         }
         displayNotes = () => {
+          const elements = document.getElementsByClassName("note");
+          while (elements.length > 0)
+            elements[0].remove();
           if (this.inputEl.value) {
             this.model.addNote(this.inputEl.value);
           }
