@@ -36,6 +36,7 @@
           this.buttonEl = document.querySelector("#add-note-button");
           this.buttonEl.addEventListener("click", () => {
             this.displayNotes();
+            this.inputEl.value = "";
           });
         }
         displayNotes = () => {

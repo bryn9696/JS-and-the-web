@@ -38,6 +38,7 @@ describe('displays notes', () => {
     inputElement.value = 'new note!'
     const buttonElement = document.querySelector('#add-note-button')
     buttonElement.click()
+    inputElement.value = '2nd new note!'
     buttonElement.click()
     expect(document.querySelectorAll(".note").length).toEqual(2)
   })
